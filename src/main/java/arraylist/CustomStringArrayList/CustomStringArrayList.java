@@ -18,10 +18,19 @@ public class CustomStringArrayList {
         }
         elements[size] = element;
         size++;
+        System.out.println(element);
     }
 
     private void grow() {
-        //напишите тут ваш код
+
+        double doubleCapacity = capacity * 1.5;
+        int newCapacity = (int) doubleCapacity;
+        String[] array = new String[newCapacity];
+        for (int i = 0; i < elements.length; i++) {
+            array[i] = elements[i];
+        }
+        elements = array;
+        capacity = newCapacity;
     }
 
 }

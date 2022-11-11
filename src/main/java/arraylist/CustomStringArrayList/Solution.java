@@ -29,6 +29,8 @@ int capacity — вместимость в текущем массиве (elemen
 •	Метод add(String) изменять нельзя.
 */
 
+import java.util.Arrays;
+
 public class Solution {
 
     public static void main(String[] args) {
