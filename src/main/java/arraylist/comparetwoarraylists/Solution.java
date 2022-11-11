@@ -27,7 +27,7 @@ public class Solution {
     public static ArrayList<String> alreadyGotSalaryEmployees = new ArrayList<>();
 
     public static void initEmployees() {
-        waitingEmployees.add("Гвинно");
+        waitingEmployees.add("Guinno");
         waitingEmployees.add("Гунигерд");
         waitingEmployees.add("Боргелейф");
         waitingEmployees.add("Нифрод");
@@ -38,9 +38,17 @@ public class Solution {
 
     public static void main(String[] args) {
         initEmployees();
+        paySalary("Guinno");
     }
 
     public static void paySalary(String name) {
-        //напишите тут ваш код
+        if (waitingEmployees.contains(name)) {
+            alreadyGotSalaryEmployees.add(name);
+            int index = waitingEmployees.indexOf(name);
+            waitingEmployees.set(index, null);
+          //  int index = waitingEmployees.get(name);
+            System.out.println(alreadyGotSalaryEmployees);
+            System.out.println(waitingEmployees);
+        }
     }
 }
