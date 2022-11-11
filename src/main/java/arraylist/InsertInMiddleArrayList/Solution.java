@@ -27,8 +27,10 @@ public class Solution {
     }
 
     public static void createNewPlanet(String planetName) {
-        //напишите тут ваш код
-    }
+        int index = planets.indexOf("Земля");
+        planets.add(index + 1, planetName);
+
+}
 
     public static void addPlanets() {
         planets.add("Меркурий");
@@ -48,3 +50,4 @@ public class Solution {
         System.out.println();
     }
 }
+
